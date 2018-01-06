@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C6C635AFA6C22FAEC71C76F /* libPods-Flights.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBBC9A2132AE227FAAFE09D /* libPods-Flights.a */; };
+		5ACAAF952000681700746D59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAAF942000681700746D59 /* AppDelegate.m */; };
+		5ACAAF982000681700746D59 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAAF972000681700746D59 /* ViewController.m */; };
+		5ACAAF9B2000681700746D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACAAF992000681700746D59 /* Main.storyboard */; };
+		5ACAAF9D2000681700746D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ACAAF9C2000681700746D59 /* Assets.xcassets */; };
+		5ACAAFA02000681700746D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACAAF9E2000681700746D59 /* LaunchScreen.storyboard */; };
+		5ACAAFA32000681700746D59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAAFA22000681700746D59 /* main.m */; };
+		5ACAAFB2200068CA00746D59 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAAFB1200068CA00746D59 /* DetailsViewController.m */; };
+		5ACAAFB72000690E00746D59 /* FAPICaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAAFB62000690E00746D59 /* FAPICaller.m */; };
+		5ACAAFBB20006B2400746D59 /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAAFBA20006B2400746D59 /* Flight.m */; };
+		5ACAAFBF2000811500746D59 /* FlightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ACAAFBE2000811500746D59 /* FlightCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A72E9F70751D6ED57409B4F /* Pods-Flights.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flights.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flights/Pods-Flights.debug.xcconfig"; sourceTree = "<group>"; };
+		2FBBC9A2132AE227FAAFE09D /* libPods-Flights.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Flights.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30DBF5CD34849D1DBA5820E8 /* Pods-Flights.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flights.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flights/Pods-Flights.release.xcconfig"; sourceTree = "<group>"; };
+		5ACAAF902000681700746D59 /* Flights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flights.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ACAAF932000681700746D59 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5ACAAF942000681700746D59 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5ACAAF962000681700746D59 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5ACAAF972000681700746D59 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5ACAAF9A2000681700746D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5ACAAF9C2000681700746D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5ACAAF9F2000681700746D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5ACAAFA12000681700746D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ACAAFA22000681700746D59 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5ACAAFB0200068CA00746D59 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		5ACAAFB1200068CA00746D59 /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		5ACAAFB52000690E00746D59 /* FAPICaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FAPICaller.h; sourceTree = "<group>"; };
+		5ACAAFB62000690E00746D59 /* FAPICaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FAPICaller.m; sourceTree = "<group>"; };
+		5ACAAFB920006B2400746D59 /* Flight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flight.h; sourceTree = "<group>"; };
+		5ACAAFBA20006B2400746D59 /* Flight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Flight.m; sourceTree = "<group>"; };
+		5ACAAFBD2000811500746D59 /* FlightCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlightCell.h; sourceTree = "<group>"; };
+		5ACAAFBE2000811500746D59 /* FlightCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ACAAF8D2000681600746D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C6C635AFA6C22FAEC71C76F /* libPods-Flights.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5ACAAF872000681600746D59 = {
+			isa = PBXGroup;
+			children = (
+				5ACAAF922000681700746D59 /* Flights */,
+				5ACAAF912000681700746D59 /* Products */,
+				9EFE33B13D66AC2365CF7DC6 /* Pods */,
+				DB0BE35C4060A5F6F00AEB9A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5ACAAF912000681700746D59 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAF902000681700746D59 /* Flights.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ACAAF922000681700746D59 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAFB3200068E900746D59 /* Services */,
+				5ACAAFAD2000689100746D59 /* Model */,
+				5ACAAFAC2000688C00746D59 /* View */,
+				5ACAAFA92000686B00746D59 /* App Delegate */,
+				5ACAAFAA2000687A00746D59 /* Storyboard */,
+				5ACAAFAB2000688400746D59 /* Conroller */,
+				5ACAAF9C2000681700746D59 /* Assets.xcassets */,
+				5ACAAF9E2000681700746D59 /* LaunchScreen.storyboard */,
+				5ACAAFA12000681700746D59 /* Info.plist */,
+				5ACAAFA22000681700746D59 /* main.m */,
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
+		5ACAAFA92000686B00746D59 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAF932000681700746D59 /* AppDelegate.h */,
+				5ACAAF942000681700746D59 /* AppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		5ACAAFAA2000687A00746D59 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAF992000681700746D59 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		5ACAAFAB2000688400746D59 /* Conroller */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAFAE2000689900746D59 /* Home */,
+				5ACAAFAF200068A200746D59 /* Details */,
+			);
+			path = Conroller;
+			sourceTree = "<group>";
+		};
+		5ACAAFAC2000688C00746D59 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAFBC200080FA00746D59 /* FlightCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5ACAAFAD2000689100746D59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAFB820006B0900746D59 /* Flight */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5ACAAFAE2000689900746D59 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAF962000681700746D59 /* ViewController.h */,
+				5ACAAF972000681700746D59 /* ViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5ACAAFAF200068A200746D59 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAFB0200068CA00746D59 /* DetailsViewController.h */,
+				5ACAAFB1200068CA00746D59 /* DetailsViewController.m */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		5ACAAFB3200068E900746D59 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAFB4200068F200746D59 /* FAPICaller */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5ACAAFB4200068F200746D59 /* FAPICaller */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAFB52000690E00746D59 /* FAPICaller.h */,
+				5ACAAFB62000690E00746D59 /* FAPICaller.m */,
+			);
+			path = FAPICaller;
+			sourceTree = "<group>";
+		};
+		5ACAAFB820006B0900746D59 /* Flight */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAFB920006B2400746D59 /* Flight.h */,
+				5ACAAFBA20006B2400746D59 /* Flight.m */,
+			);
+			path = Flight;
+			sourceTree = "<group>";
+		};
+		5ACAAFBC200080FA00746D59 /* FlightCell */ = {
+			isa = PBXGroup;
+			children = (
+				5ACAAFBD2000811500746D59 /* FlightCell.h */,
+				5ACAAFBE2000811500746D59 /* FlightCell.m */,
+			);
+			path = FlightCell;
+			sourceTree = "<group>";
+		};
+		9EFE33B13D66AC2365CF7DC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A72E9F70751D6ED57409B4F /* Pods-Flights.debug.xcconfig */,
+				30DBF5CD34849D1DBA5820E8 /* Pods-Flights.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB0BE35C4060A5F6F00AEB9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FBBC9A2132AE227FAAFE09D /* libPods-Flights.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ACAAF8F2000681600746D59 /* Flights */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ACAAFA62000681700746D59 /* Build configuration list for PBXNativeTarget "Flights" */;
+			buildPhases = (
+				602192FABB14B440C5CF2D20 /* [CP] Check Pods Manifest.lock */,
+				5ACAAF8C2000681600746D59 /* Sources */,
+				5ACAAF8D2000681600746D59 /* Frameworks */,
+				5ACAAF8E2000681600746D59 /* Resources */,
+				36BE234DF62D91B148A16D8B /* [CP] Embed Pods Frameworks */,
+				19C3D6653A455769FB0BD5A4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Flights;
+			productName = Flights;
+			productReference = 5ACAAF902000681700746D59 /* Flights.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ACAAF882000681600746D59 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Umar;
+				TargetAttributes = {
+					5ACAAF8F2000681600746D59 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5ACAAF8B2000681600746D59 /* Build configuration list for PBXProject "Flights" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5ACAAF872000681600746D59;
+			productRefGroup = 5ACAAF912000681700746D59 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ACAAF8F2000681600746D59 /* Flights */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ACAAF8E2000681600746D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ACAAFA02000681700746D59 /* LaunchScreen.storyboard in Resources */,
+				5ACAAF9D2000681700746D59 /* Assets.xcassets in Resources */,
+				5ACAAF9B2000681700746D59 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19C3D6653A455769FB0BD5A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Flights/Pods-Flights-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flights/Pods-Flights-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36BE234DF62D91B148A16D8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flights/Pods-Flights-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		602192FABB14B440C5CF2D20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Flights-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ACAAF8C2000681600746D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ACAAF982000681700746D59 /* ViewController.m in Sources */,
+				5ACAAFA32000681700746D59 /* main.m in Sources */,
+				5ACAAFB72000690E00746D59 /* FAPICaller.m in Sources */,
+				5ACAAFBF2000811500746D59 /* FlightCell.m in Sources */,
+				5ACAAF952000681700746D59 /* AppDelegate.m in Sources */,
+				5ACAAFB2200068CA00746D59 /* DetailsViewController.m in Sources */,
+				5ACAAFBB20006B2400746D59 /* Flight.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5ACAAF992000681700746D59 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ACAAF9A2000681700746D59 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5ACAAF9E2000681700746D59 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ACAAF9F2000681700746D59 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5ACAAFA42000681700746D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5ACAAFA52000681700746D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ACAAFA72000681700746D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A72E9F70751D6ED57409B4F /* Pods-Flights.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y2AHJ2G952;
+				INFOPLIST_FILE = Flights/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.umar.Flights;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5ACAAFA82000681700746D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30DBF5CD34849D1DBA5820E8 /* Pods-Flights.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y2AHJ2G952;
+				INFOPLIST_FILE = Flights/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.umar.Flights;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ACAAF8B2000681600746D59 /* Build configuration list for PBXProject "Flights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ACAAFA42000681700746D59 /* Debug */,
+				5ACAAFA52000681700746D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ACAAFA62000681700746D59 /* Build configuration list for PBXNativeTarget "Flights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ACAAFA72000681700746D59 /* Debug */,
+				5ACAAFA82000681700746D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5ACAAF882000681600746D59 /* Project object */;
+}
