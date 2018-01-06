@@ -62,11 +62,11 @@ static NSString* const BASE_URL = @"https://glacial-caverns-15124.herokuapp.com/
 
 /* Get Flight details */
 
--(void)getFlightDetailsWithUserID:(NSString*)flightID withHandler:(void (^)(NSDictionary* info,BOOL success,NSError* error))completion
+-(void)getFlightDetailsWithFlightID:(NSInteger)flightID withHandler:(void (^)(NSDictionary* info,BOOL success,NSError* error))completion
 {
     __block BOOL success = NO;
     
-    NSString *reqURL = [NSString stringWithFormat:@"%@/%@",BASE_URL,flightID];
+    NSString *reqURL = [NSString stringWithFormat:@"%@/%li",BASE_URL,flightID];
     
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
@@ -75,9 +75,7 @@ static NSString* const BASE_URL = @"https://glacial-caverns-15124.herokuapp.com/
     [[manager dataTaskWithRequest:req completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (!error)
-        {
-            NSLog(@"Reply JSON: %@", responseObject);
-            
+        {            
             if ([responseObject isKindOfClass:[NSDictionary class]])
             {
                 success = YES;

@@ -24,7 +24,7 @@
 
 /* Get Flight details */
 
--(void)getFlightDetailsWithUserID:(NSString*)flightID withHandler:(void (^)(NSDictionary* info,BOOL success,NSError* error))completion;
+-(void)getFlightDetailsWithFlightID:(NSInteger)flightID withHandler:(void (^)(NSDictionary* info,BOOL success,NSError* error))completion;
 
 
 @end

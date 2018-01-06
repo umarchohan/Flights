@@ -15,6 +15,7 @@
 #import "FlightCell.h"
 
 @interface ViewController ()
+
 {
     NSMutableArray* flightsArray;
 }
@@ -48,8 +49,6 @@
 
 -(void)setupNavBar
 {
-    self.navigationController.navigationBar.prefersLargeTitles = YES;
-    
     UIImageView* img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 40)];
     img.contentMode = UIViewContentModeScaleAspectFit;
     img.image = [UIImage imageNamed:@"FlightMini"];
@@ -64,33 +63,28 @@
     
     [[FAPICaller sharedManager] getAllFlightswithHandler:^(NSDictionary *info, BOOL success, NSError *error) {
         
-        dispatch_async(dispatch_get_main_queue(), ^{
+        [self.view setUserInteractionEnabled:YES];
+
+        if (success)
+        {
             
-            if (success)
+            [SVProgressHUD dismiss];
+            
+            NSArray* list = (NSArray*)info;
+            
+            for (int i = 0; i < list.count; i++)
             {
-                
-                [self.view setUserInteractionEnabled:YES];
-                [SVProgressHUD dismiss];
-                
-                NSArray* list = (NSArray*)info;
-                
-                for (int i = 0; i < list.count; i++)
-                {
-                    Flight* f = [[Flight alloc] initWithInfo:list[i]];
-                    [flightsArray addObject:f];
-                }
-                
-                [self.flightTable reloadData];
-            }
-            else
-            {
-                [SVProgressHUD dismiss];
-                [SVProgressHUD showErrorWithStatus:@"Oops! Server Error"];
+                Flight* f = [[Flight alloc] initWithInfo:list[i]];
+                [flightsArray addObject:f];
             }
             
-        });
-        
-        
+            [self.flightTable reloadData];
+        }
+        else
+        {
+            [SVProgressHUD dismiss];
+            [SVProgressHUD showErrorWithStatus:@"Oops! Server Error"];
+        }
         
     }];
 }
@@ -99,14 +93,14 @@
 {
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         
-        switch (status) {
+        switch (status)
+        {
             case 0:
                 [SVProgressHUD showErrorWithStatus:@"No Connection,Please check your cellular or WIFI network"];
                 break;
             default:
                 break;
         }
-        
     }];
     
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
@@ -122,9 +116,7 @@
 #pragma mark UITableview delegate
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-
 {
-    
     FlightCell* cell = [tableView dequeueReusableCellWithIdentifier:@"FlightCell" forIndexPath:indexPath];
 
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -134,12 +126,18 @@
     cell.departureCityLable.text = f.departureAirport;
     cell.destinationCityLable.text = f.arrivalAirport;
     
-    cell.departureTimeLabel.text = [NSString stringWithFormat:@"Departure %@",f.departureDate];
-    cell.arrivalTimeLabel.text = [NSString stringWithFormat:@"Arrival %@",f.arrivalDate];
-    cell.flightDurationLabel.text = [NSString stringWithFormat:@"Duration %@",f.flightDuration];
-    
+    cell.departureTimeLabel.text = [NSString stringWithFormat:@"Departure: %@",f.departureDate];
+    cell.arrivalTimeLabel.text = [NSString stringWithFormat:@"Arrival: %@",f.arrivalDate];
+    cell.flightDurationLabel.text = [NSString stringWithFormat:@"Duration: %@",f.flightDuration];
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DetailsViewController* view = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailsViewController"];
+    view.selectedFlight = [flightsArray objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:view animated:YES];
 }
 
 @end
